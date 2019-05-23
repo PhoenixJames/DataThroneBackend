@@ -5,7 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 //var assignment=require('./routes/assignment');
-var townshipRouter=require('./routes/township');
+var townshipRouter = require('./routes/township');
+var populationRouter = require('./routes/population');
 
 
 var app = express();
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //app.use('/api/assignment', assignment);
   // app.use('/api/lyric', lyricRouter);
 app.use('/api/township', townshipRouter);
+app.use('/api/population', populationRouter);
 
 
 
