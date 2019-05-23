@@ -4,7 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var township=require('./routes/township');
+//var assignment=require('./routes/assignment');
+var townshipRouter=require('./routes/township');
 
 
 var app = express();
@@ -24,9 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-  // app.use('/api/assignment', assignmentRouter);
+//app.use('/api/assignment', assignment);
   // app.use('/api/lyric', lyricRouter);
-app.use('/api/township', township);
+app.use('/api/township', townshipRouter);
 
 
 

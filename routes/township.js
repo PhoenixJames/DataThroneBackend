@@ -31,3 +31,5 @@ var getAllTownship = function (req, res) {
 
 router.get('/', getAllTownship);
 router.get('/:srpcode', getTownshipBySRPCode);
+
+module.exports = router;
